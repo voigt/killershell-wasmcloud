@@ -15,7 +15,6 @@
       {
         "title": "Deploy an Actor & Provider",
         "text": "step2/text.md",
-        "verify": "step2/verify.sh"
       },
       {
         "title": "Wrapping Up",
