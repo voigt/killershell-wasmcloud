@@ -1,4 +1,3 @@
 #!/bin/bash
 
-which wash
-wash --version
+docker ps | grep redis > /dev/null

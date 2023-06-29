@@ -1,29 +1,20 @@
-# Startup Wasmcloud
+# Counter App
 
 There are multiple ways to install wasmcloud. The easiest way is to use the `curl` command to download the latest release and install it. 
 
-### Execute a command per click
+### Start a Database
 
-Download
+For demonstration purposes we will use Redis as a Database
 
-The following script will add Wasmcloud packages to your Repository:
+`docker run --name redis -d -p 6379:6379 redis`{{exec}}
 
-`curl -s https://packagecloud.io/install/repositories/wasmcloud/core/script.deb.sh | sudo bash
-`{{exec}}
+Verify that redis is running with `docker ps`{{exec}}.
 
-Now you can install wash-cli, the CLI client to interact with wasmcloud: Please note, that we additionally need to install openssl, as it is a dependency to wash-cli.
+### Start Actor
 
-`sudo apt install wash openssl`{{exec}}
 
-### Verifying the installation
 
-Make sure the installation was successful by running the following command:
+### Start Provider
 
-`wash --version`{{exec}}
 
-Which should answer with something like this:
 
-```bash
-ubuntu $ wash --version
-wash 0.18.0
-```
