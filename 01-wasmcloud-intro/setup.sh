@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Stop k8s services
-systemctl daemon-reload
-systemctl stop kubepods.slice
-systemctl stop kubelet
+systemctl daemon-reload &
+systemctl stop kubepods.slice &
+systemctl stop kubelet &
 
 curl -s https://packagecloud.io/install/repositories/wasmcloud/core/script.deb.sh | bash
 apt install wash openssl direnv
@@ -18,3 +18,4 @@ eval "\$(direnv hook bash)"
 EOF
 
 direnv allow
+wait
