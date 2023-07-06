@@ -1,20 +1,45 @@
-# Counter App
+### Interacting with the wash cli
 
-There are multiple ways to install wasmcloud. The easiest way is to use the `curl` command to download the latest release and install it. 
+### Listing wasmCloud hosts
 
-### Start a Database
+You can get a list of hosts that are part of your wasmCloud cluster via `wash get hosts`.
 
-For demonstration purposes we will use Redis as a Database
+`wash get hosts`{{exec}}
 
-`docker run --name redis -d -p 6379:6379 redis`{{exec}}
-
-Verify that redis is running with `docker ps`{{exec}}.
-
-### Start Actor
+```
+$ wash get hosts
 
 
+  Host ID                                                    Uptime (seconds)
+  <very-long-host-id>   936
+```
 
-### Start Provider
+### Listing a hosts inventory inventory
+
+You can describe a host and see whats running on it via `wash get inventory <host-id>`
+
+Lets describe our host:
+
+```
+wash get inventory $(wash get hosts -ojson | jq -r '.hosts[0].id')
+```{{exec}}
+
+Which should output something like this:
+
+```
+$ wash get inventory $(wash get hosts -ojson | jq -r '.hosts[0].id')
 
 
+  Host Inventory (<very-long-host-id>)
 
+  hostcore.arch                         x86_64
+  hostcore.os                           linux
+  hostcore.osfamily                     unix
+
+  No actors found
+
+  No providers found
+```
+
+
+Note that all this information is queried from NATS.

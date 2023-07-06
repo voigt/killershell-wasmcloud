@@ -11,17 +11,21 @@ ubuntu $ wash --version
 wash 0.18.0
 ```
 
-### Getting familar with `wash`
+### Getting familar with `wash` and the wasmCloud host
 
-Interact and manage wasmCloud applications, projects, and runtime environments
+The `wash`-cli is your multitool to work with WasmCloud.
 
-`wash`{{exec}}
+It is not only used to configure and operate a WasmCloud host, but also to build, publish and run wasmCLoud aplications.
 
-### Startup WasmCloud
+Enter `wash`{{exec}} to see the options provided by the tool.
 
-Great, now we can start WasmCloud:
+Lets bootstrap a local wasmCloud environment using `wash up`:
 
 `wash up`{{exec}}
+
+You should see some logs about a successfully started wasmCloud Host.
+
+### Accessing the UI
 
 This will expose the WasmCloud control plane on port 4000. You can verify that the control plane is running accessing the WebUI: [localhost:4000]({{TRAFFIC_HOST1_4000}}).
 
