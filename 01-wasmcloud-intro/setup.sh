@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # Stop k8s services
+# systemctl list-unit-files | grep enabled
 systemctl daemon-reload &
-systemctl stop kubepods.slice &
-systemctl stop kubelet &
+systemctl disable --now kubepods.slice &
+systemctl disable --now kubelet &
+ssh 172.30.2.2 "systemctl disable --now kubepods.slice" &
+ssh 172.30.2.2 "systemctl disable --now kubelet" &
 
 curl -s https://packagecloud.io/install/repositories/wasmcloud/core/script.deb.sh | bash
 apt install wash openssl direnv
