@@ -41,5 +41,4 @@ $ wash get inventory $(wash get hosts -ojson | jq -r '.hosts[0].id')
   No providers found
 ```
 
-
-Note that all this information is queried from NATS.
+Note that all this information is queried from NATS. But as we haven't deployed anything on our host yet, this is more or less empty.

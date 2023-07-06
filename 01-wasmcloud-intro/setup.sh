@@ -11,6 +11,10 @@ ssh 172.30.2.2 "systemctl disable --now kubepods.slice; systemctl disable --now 
 curl -s https://packagecloud.io/install/repositories/wasmcloud/core/script.deb.sh | bash
 apt install wash openssl direnv
 
+# Setup wash completion
+wash completions -d $HOME/.wash bash
+source $HOME/.wash/wash.bash
+
 cat << EOF > .envrc
 export WASMCLOUD_CLUSTER_SEED="SCADMX4TAR3KWXQT2VI66WVJIEGSORZ46DIKQOVU7EUIVX6V7CQ7QRHWMM"
 EOF
