@@ -5,9 +5,9 @@
 systemctl daemon-reload &
 systemctl disable --now kubepods.slice &
 systemctl disable --now kubelet &
-ssh 172.30.2.2 "systemctl disable --now kubepods.slice" &
-ssh 172.30.2.2 "systemctl disable --now kubelet" &
+ssh 172.30.2.2 "systemctl disable --now kubepods.slice; systemctl disable --now kubelet" &
 
+# Setup wash cli
 curl -s https://packagecloud.io/install/repositories/wasmcloud/core/script.deb.sh | bash
 apt install wash openssl direnv
 
@@ -21,4 +21,5 @@ eval "\$(direnv hook bash)"
 EOF
 
 direnv allow
+source ~/.bashrc
 wait
