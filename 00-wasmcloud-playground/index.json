@@ -1,6 +1,6 @@
 {
-  "title": "Getting started with WasmCloud",
-  "description": "A quick intro to WasmCloud where you will learn how to create a cluster and run an example application.",
+  "title": "00. WasmCloud Playground",
+  "description": "Play with WasmCloud, this does not have any tasks or questions; it is created to try things related to WasmCloud.",
   "details": {
     "intro": {
       "text": "intro.md",
