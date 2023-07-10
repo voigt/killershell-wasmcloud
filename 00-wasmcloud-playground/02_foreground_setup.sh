@@ -6,4 +6,3 @@ echo DONE
 
 direnv allow
 source /root/.bashrc
-direnv allow
