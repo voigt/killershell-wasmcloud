@@ -1,0 +1,35 @@
+{
+  "title": "Getting started with WasmCloud",
+  "description": "A quick intro to WasmCloud where you will learn how to create a cluster and run an example application.",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Startup WasmCloud",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Investigating the System",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Interacting with wash",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Deploying a first app",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

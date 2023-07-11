@@ -4,24 +4,57 @@
   "details": {
     "intro": {
       "text": "intro.md",
-      "background": "setup.sh"
+      "foreground": "foreground.sh",
+      "background": "background.sh"
     },
     "steps": [
       {
         "title": "Startup WasmCloud",
-        "text": "step1/text.md"
-      },
-      {
-        "title": "Investigating the System",
-        "text": "step2/text.md"
+        "text": "startup_wasmcloud/text.md"
       },
       {
         "title": "Interacting with wash",
-        "text": "step3/text.md"
+        "text": "interacting_with_wash/text.md"
       },
       {
-        "title": "Deploying a first app",
-        "text": "step4/text.md"
+        "title": "Investigating the System",
+        "text": "investigate_system/text.md"
+      },
+      {
+        "title": "01 - Deploying a first app",
+        "text": "start_actor/explanation.md"
+      },
+      {
+        "title": "01 - Deploying a first app",
+        "text": "start_actor/example.md"
+      },
+      {
+        "title": "02 - Deploying a first app",
+        "text": "start_actor/start_actor.md"
+      },
+      {
+        "title": "03 - Deploying a first app",
+        "text": "start_provider/explanation.md"
+      },
+      {
+        "title": "04 - Deploying a first app",
+        "text": "start_provider/start_provider.md"
+      },
+      {
+        "title": "05 - Deploying a first app",
+        "text": "publish_links/explanation.md"
+      },
+      {
+        "title": "05 - Deploying a first app",
+        "text": "publish_links/explanation.md"
+      },
+      {
+        "title": "05 - Deploying a first app",
+        "text": "publish_links/publish_links.md"
+      },
+      {
+        "title": "05 - Deploying a first app",
+        "text": "publish_links/wrapup.md"
       }
     ],
     "finish": {
