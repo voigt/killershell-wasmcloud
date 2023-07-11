@@ -1,11 +1,11 @@
 {
-  "title": "Getting started with WasmCloud",
+  "title": "01. Getting started with WasmCloud",
   "description": "A quick intro to WasmCloud where you will learn how to create a cluster and run an example application.",
   "details": {
     "intro": {
       "text": "intro.md",
-      "foreground": "foreground.sh",
-      "background": "background.sh"
+      "background": "01_background_setup..sh",
+      "foreground": "02_foreground.sh"
     },
     "steps": [
       {
